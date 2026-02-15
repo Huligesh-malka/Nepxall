@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nepxall – Next Places for Living</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{color:#0f172a;}
+
+/* NAV */
+nav{
+position:sticky;top:0;
+background:white;
+display:flex;justify-content:space-between;align-items:center;
+padding:16px 8%;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+z-index:1000;
+}
+
+.brand{
+font-size:1.9rem;
+font-weight:700;
+background:linear-gradient(120deg,#2563eb,#22c55e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav a{
+text-decoration:none;
+margin-left:30px;
+color:#1e293b;
+font-weight:500;
+}
+
+/* HERO */
+.hero{
+background:
+linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.85)),
+url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+color:white;
+text-align:center;
+padding:160px 20px;
+}
+
+.badge{
+background:white;
+color:#2563eb;
+padding:8px 20px;
+border-radius:30px;
+font-weight:600;
+display:inline-block;
+margin-bottom:20px;
+}
+
+.hero h1{font-size:3.3rem;margin-bottom:15px;}
+.hero p{font-size:1.2rem;opacity:.95;max-width:750px;margin:auto}
+
+/* SECTIONS */
+section{padding:100px 8%;text-align:center;}
+
+.title{
+font-size:2.5rem;
+margin-bottom:20px;
+font-weight:700;
+background:linear-gradient(120deg,#2563eb,#22c55e);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+max-width:850px;
+margin:auto;
+margin-bottom:50px;
+color:#475569;
+font-size:1.1rem;
+}
+
+/* BACKGROUNDS */
+#about{background:#f8fafc;}
+#services{background:#f1f5f9;}
+#status{background:#eef2ff;}
+#screens{background:#f0fdf4;}
+#contact{background:#f8fafc;}
+
+/* 🚀 CTA – NEW GRADIENT (orange & pink) */
+#cta{
+background:linear-gradient(145deg, #f97316, #db2777);
+color:white;
+position:relative;
+}
+
+/* GRID */
+.grid{display:flex;flex-wrap:wrap;gap:30px;justify-content:center;}
+
+.card{
+background:white;
+padding:35px;
+width:280px;
+border-radius:18px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.3s;
+}
+.card:hover{transform:translateY(-10px);}
+
+/* STATUS BOX */
+.status{
+background:white;
+padding:50px;
+border-radius:20px;
+max-width:850px;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+.status p{margin:12px 0;font-size:1.1rem;}
+
+/* GALLERY */
+.gallery img{
+width:260px;
+border-radius:15px;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+.gallery img:hover{transform:scale(1.05);}
+
+/* CTA BUTTON */
+.cta-btn{
+background:white;
+color:#db2777;  /* changed to match new gradient */
+padding:14px 30px;
+border:none;
+border-radius:30px;
+font-weight:600;
+margin-top:20px;
+cursor:pointer;
+font-size:1rem;
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+transition:.2s;
+}
+.cta-btn:hover{background:#f1f5f9;transform:scale(1.02);}
+
+/* CONTACT */
+.contact-box{
+background:white;
+padding:45px;
+border-radius:20px;
+max-width:500px;
+margin:auto;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+footer{
+background:#020617;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+/* MODAL */
+.modal{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.9);
+z-index:999;
+padding-top:60px;
+}
+.modal img{
+max-width:90%;
+max-height:85%;
+margin:auto;
+display:block;
+border-radius:15px;
+}
+.modal span{
+position:absolute;
+top:20px;right:40px;
+font-size:45px;
+color:white;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="brand">Nepxall</div>
+<div>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#screens">Screens</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<div class="hero">
+<div class="badge">🚀 India’s Trusted Rental Technology Platform</div>
+<h1>Next Places for Living</h1>
+<p>
+Discover verified PG, coliving and rental homes with secure eKYC,
+instant booking, digital agreements and zero brokerage.
+</p>
+</div>
+
+<section id="about">
+<h2 class="title">About Nepxall</h2>
+<p class="subtitle">
+Nepxall is a digital rental platform for PG, coliving and to-let homes.
+We connect verified tenants with trusted owners — safely and quickly.
+</p>
+
+<div style="max-width:900px; margin:0 auto; text-align:left; background:white; padding:2.2rem 2.4rem; border-radius:28px; box-shadow:0 12px 30px rgba(0,0,0,0.05);">
+
+<p style="font-size:1.15rem; margin-bottom:1rem; color:#0f172a; font-weight:600;">🏢 Who we are</p>
+<p style="margin-bottom:1.5rem; color:#334155; line-height:1.7;">
+Founded in Bangalore, Nepxall simplifies renting with a fully digital experience — from property discovery to eKYC and instant agreements.
+</p>
+
+<p style="font-size:1.15rem; margin-bottom:1rem; color:#0f172a; font-weight:600;">🚀 Our mission</p>
+<p style="margin-bottom:1.5rem; color:#334155; line-height:1.7;">
+To make rental housing in India zero-brokerage, secure, and instant for tenants while helping owners manage everything from one smart dashboard.
+</p>
+
+<p style="font-size:1.15rem; margin-bottom:1rem; color:#0f172a; font-weight:600;">🤝 Why Nepxall</p>
+<p style="color:#334155; line-height:1.7;">
+Verified users, digital agreements, automated management tools, and a seamless search-to-move-in journey — all in one platform.
+</p>
+
+</div>
+</section>
+<section id="services">
+<h2 class="title">What We Offer</h2>
+
+<div class="grid">
+
+<div class="card"><h3>🔐 100% KYC Verified Users</h3></div>
+
+<div class="card"><h3>🏠 Smart Property Search</h3></div>
+
+<div class="card"><h3>📄 Digital Rental Agreements</h3></div>
+
+<div class="card"><h3>📲 Owner Management Dashboard</h3></div>
+
+<div class="card"><h3>💳 Online Rent Payments</h3></div>
+
+<div class="card"><h3>⚡ Instant Booking System</h3></div>
+
+<div class="card"><h3>🧾 Automated Rent Receipts</h3></div>
+
+<div class="card"><h3>📅 Stay & Move-in Tracking</h3></div>
+
+<div class="card"><h3>🛡 Tenant Background Verification</h3></div>
+
+<div class="card"><h3>📸 Property Image & Video Upload</h3></div>
+
+<div class="card"><h3>🌍 Multi-City Property Listing</h3></div>
+
+<div class="card"><h3>📊 Real-time Availability Status</h3></div>
+
+
+
+</div>
+</section>
+
+
+<section id="status">
+<h2 class="title">Platform Progress</h2>
+<div class="status">
+<p>✅ Production-ready MVP</p>
+<p>🔐 Aadhaar & PAN eKYC Integration</p>
+<p>📄 Automated Agreement System</p>
+<p>📲 Tenant & Owner Apps</p>
+</div>
+</section>
+
+<section id="screens">
+<h2 class="title">Live Product Preview</h2>
+
+<div class="grid gallery">
+<img src="images/screen1.png" onclick="openModal(this.src)" alt="screen 1">
+<img src="images/screen2.png" onclick="openModal(this.src)" alt="screen 2">
+<img src="images/screen3.png" onclick="openModal(this.src)" alt="screen 3">
+<img src="images/screen4.png" onclick="openModal(this.src)" alt="screen 3">
+<img src="images/screen5.png" onclick="openModal(this.src)" alt="screen 3">
+
+
+
+
+
+</div>
+</section>
+
+<!-- ===== NEW COLOUR / BACKGROUND FOR CTA ===== -->
+<section id="cta">
+<h2 style="font-size:2.8rem; font-weight:700; margin-bottom:15px;">Launching Across India Soon</h2>
+<p class="subtitle" style="color:rgba(255,255,255,0.9); max-width:700px;">
+Join early and become part of India’s most trusted rental platform.
+</p>
+<button class="cta-btn">Platform Launch – Coming Soon</button>
+</section>
+
+<section id="contact">
+<h2 class="title">Contact Nepxall</h2>
+
+<div class="contact-box">
+<p><b>Company:</b> Nepxall</p>
+<p><b>Phone:</b> 7483090510</p>
+<p><b>Email:</b> huligeshmalka@gmail.com</p>
+<p><b>Location:</b> Bangalore, India</p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Nepxall – Next Places for Living. All Rights Reserved.</p>
+</footer>
+
+<script>
+function openModal(src){
+document.querySelector(".modal").style.display="block";
+document.getElementById("modalImg").src=src;
+}
+function closeModal(){
+document.querySelector(".modal").style.display="none";
+}
+</script>
+
+<div class="modal">
+<span onclick="closeModal()">&times;</span>
+<img id="modalImg">
+</div>
+
+</body>
+</html>
